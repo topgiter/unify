@@ -33,9 +33,21 @@ angular
         url: '/sign_in',
         templateUrl: 'content/sign_in/main.html'
       })
-      .state('forget', {
-        url: '/forget_password',
-        templateUrl: 'content/forget/main.html'
+      .state('sign_up', {
+        url: '/sign_up',
+        templateUrl: 'content/sign_up/main.html'
       })
+      .state('forgot_password', {
+        url: '/forgot_password',
+        templateUrl: 'content/forgot_password/main.html'
+      })
+      .state('password_reset', {
+        url: '/password_reset',
+        templateUrl: 'content/password_reset/main.html'
+      })
+      .state('write_poem', {
+        url: '/write_poem',
+        templateUrl: 'content/write_poem/main.html'
+      });
       
   });
