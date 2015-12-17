@@ -13,28 +13,29 @@ angular
     'ngAnimate',
     'ngCookies',
     'ngResource',
-    'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise("/");
+
+    $stateProvider
+      .state('home', {
+        url: '/',
+        templateUrl: 'content/home/main.html',
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .state('about', {
+        url: '/about',
+        templateUrl: 'content/home/about.html'
       })
-      .when('/route', {
-        templateUrl: 'views/route.html',
-        controller: 'RouteCtrl',
-        controllerAs: 'route'
+      .state('sign_in', {
+        url: '/sign_in',
+        templateUrl: 'content/sign_in/main.html'
       })
-      .otherwise({
-        redirectTo: '/'
-      });
+      .state('forget', {
+        url: '/forget_password',
+        templateUrl: 'content/forget/main.html'
+      })
+      
   });
