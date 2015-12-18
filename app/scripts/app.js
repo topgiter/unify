@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+var unifyApp = 
 angular
   .module('unifyApp', [
     'ngAnimate',
@@ -25,11 +26,12 @@ angular
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'content/home/main.html',
+        templateUrl: 'content/home/main.html'
       })
-      .state('about', {
-        url: '/about',
-        templateUrl: 'content/home/about.html'
+      .state('loggedin', {
+        url: '/main',
+        templateUrl: 'content/loggedin/main.html',
+        controller: 'LoggedInCtrl'
       })
       .state('sign_in', {
         url: '/sign_in',
@@ -74,6 +76,6 @@ angular
       .state('profile', {
         url: '/profile',
         templateUrl: 'content/profile/main.html'
-      })
+      });
        
   });

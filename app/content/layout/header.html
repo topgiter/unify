@@ -7,7 +7,7 @@
             <!-- End Logo -->
             
             <!-- Topbar -->
-          <div class="topbar">
+            <div class="topbar" ng-hide="signed_user">
                 <ul class="loginbar pull-right">
                     <li class="btn-u rounded btn-u-success btn-u-sm hoverSelector btn-u-brown" style="margin-right: 5px;">
                         <a ui-sref="sign_in">LOGIN</a>
@@ -17,6 +17,19 @@
                     </li>
                 </ul>
             </div>
+            <div class="topbar" ng-show="signed_user">
+                <ul class="loginbar pull-right">
+                    <li class="margin-right10"> <a ui-sref="profile"><img class="header-avatar" src="assets/img/testimonials/img2.jpg" alt=""><span class="header-avatar-name"> Andrew</span></a></li>
+                    <li>
+                      <ul class="list-inline badge-lists badge-icons">
+                          <li><a class="tooltips" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Write&nbsp;Poem" ui-sref="write_poem"><i class="fa fa-pencil green"></i></a></li>
+                          <li><a href="#"><i class="fa fa-cog brown"></i></a></li>
+                          <li><a href="#"><i class="fa fa-envelope brown"></i></a><span class="badge badge-red badgenum rounded-x">2</span></li>
+                          <li><a href="#"><i class="fa fa-bell brown"></i></a><span class="badge badge-red rounded-x badgenum">4</span></li>
+                      </ul>
+                   </li>
+                </ul>
+            </div>            
             <!-- End Topbar -->
 
             <!-- Toggle get grouped for better mobile display -->
@@ -27,64 +40,5 @@
             <!-- End Toggle -->
         </div><!--/end container-->
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
-            <div class="container">
-                <ul class="nav navbar-nav">
-                    <!-- Home -->
-                    <li>
-                        <a ui-sref="home">
-                            <i class="fa fa-home"></i>
-                        </a>
-                    </li>
-                    <!-- End Home -->
-
-                    <!-- Poems -->
-                    <li class="dropdown">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                            Poems
-                        </a>
-                    </li>
-                    <!-- End Poems -->
-
-                    <!-- Poetry -->
-                    <li class="dropdown">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                            Poets
-                        </a>
-                    </li>                    
-                    <!-- End Poetry -->
-
-                    <!-- Media -->
-                    <li>
-                        <a href="javascript:void(0);">
-                            Media
-                        </a>
-                    </li>
-                    <!-- End Media -->
-
-                    <!-- Support -->
-                    <li>
-                        <a ui-sref="about">
-                            SUPPORT
-                        </a>
-                    </li>
-                    <!-- End Support -->
-
-                    <!-- Search Block -->
-                    <li>
-                        <i class="search fa fa-search search-btn"></i>
-                        <div class="search-open">
-                            <div class="input-group animated fadeInDown">
-                                <input type="text" class="form-control" placeholder="Search">
-                                <span class="input-group-btn">
-                                    <button class="btn-u" type="button">Go</button>
-                                </span>
-                            </div>
-                        </div>    
-                    </li>
-                    <!-- End Search Block -->
-                </ul>
-            </div><!--/end container-->
-        </div><!--/navbar-collapse-->
+        <div ng-include="'content/layout/topnav.html'"></div>
     </div>
