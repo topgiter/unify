@@ -39,7 +39,13 @@
   </head>
 
   <body ng-app="unifyApp">
-    <div ng-include="'content/layout/application.html'"></div>
+    <div class="wrapper">
+        <div ng-include="'content/layout/header.html'"></div>
+
+        <ui-view></ui-view>
+
+        <div ng-include="'content/layout/footer.html'"></div>
+    </div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
