@@ -50,6 +50,30 @@ angular
       .state('write_poem', {
         url: '/write_poem',
         templateUrl: 'content/write_poem/main.html'
-      });
-      
+      })
+      .state('about_gsp', {
+        url: '/about_gsp',
+        templateUrl: 'content/about_gsp/main.html'
+      })
+      .state('about_coppa', {
+        url: '/about_coppa',
+        templateUrl: 'content/about_coppa/main.html'
+      })
+      .state('about_copyrights', {
+        url: '/about_copyrights',
+        templateUrl: 'content/about_copyrights/main.html'
+      })
+      .state('about_privacy', {
+        url: '/about_privacy',
+        templateUrl: 'content/about_privacy/main.html'
+      })
+      .state('about_terms', {
+        url: '/about_terms',
+        templateUrl: 'content/about_terms/main.html'
+      })
+      .state('profile', {
+        url: '/profile',
+        templateUrl: 'content/profile/main.html'
+      })
+       
   });
