@@ -16,7 +16,8 @@ angular
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'ui.router'
+    'ui.router',
+    'kendo.directives'
   ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $locationProvider.html5Mode(false);
@@ -27,6 +28,7 @@ angular
       .state('home', {
         url: '/',
         templateUrl: 'content/home/main.html'
+        controller: 'HomeCtrl'
       })
       .state('loggedin', {
         url: '/main',
