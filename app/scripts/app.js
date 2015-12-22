@@ -27,7 +27,7 @@ angular
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'content/home/main.html'
+        templateUrl: 'content/home/main.html',
         controller: 'HomeCtrl'
       })
       .state('loggedin', {
